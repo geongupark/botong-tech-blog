@@ -1,0 +1,24 @@
+{
+  "name": "botong-tech-blog",
+  "version": "1.0.0",
+  "description": "Tech blog called botong",
+  "main": "index.js",
+  "scripts": {
+    "docs:dev": "vuepress dev docs",
+    "docs:build": "vuepress build docs",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/geongupark/botong-tech-blog.git"
+  },
+  "author": "geongu.park",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/geongupark/botong-tech-blog/issues"
+  },
+  "homepage": "https://github.com/geongupark/botong-tech-blog#readme",
+  "devDependencies": {
+    "vuepress": "^2.0.0-beta.61"
+  }
+}
