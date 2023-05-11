@@ -27,28 +27,7 @@ export default defineConfig(
               // ]
             }
           ],
-        //  'LAB' : getSidebar(__dirname + '/../lab', '.md').then(result => { const fileObjects = result; }).catch(err => { console.log('Error:', err);}),
         },
-        // sidebar: [
-        //   getSidebar({ contentRoot: '/docs', contentDirs: ['TIL'], collapsible: true, collapsed: true }),
-        //   getSidebar({ contentRoot: '/docs', contentDirs: ['lab'], collapsible: true, collapsed: true }),
-        // ],
-        // sidebar: {
-        //   '/til/': getSidebar({ contentRoot: '/docs', contentDirs: ['TIL'], collapsible: true, collapsed: true }),
-        //   '/lab/': getSidebar({ contentRoot: '/docs', contentDirs: ['lab'], collapsible: true, collapsed: true }),
-        // },
-        // sidebar: {
-        //   '/til/': [
-        //     {
-        //       text: 'TIL',
-        //       link: '/til/',
-        //       items: [
-        //         { text: 'Markdown Examples', link: '/til/markdown-examples' },
-        //         { text: 'Runtime API Examples', link: '/til/api-examples' }
-        //       ]
-        //     }
-        //   ],
-        // },
     
         socialLinks: [
           { icon: 'github', link: 'https://github.com/vuejs/vitepress' }
