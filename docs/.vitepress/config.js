@@ -7,7 +7,7 @@ export default defineConfig(
   async () => {
     return {
       title: "Botong",
-      base: "/botong-tech-blog/"
+      base: "/botong-tech-blog/",
       description: "Tech blog : botong",
       themeConfig: {
         // https://vitepress.dev/reference/default-theme-config
