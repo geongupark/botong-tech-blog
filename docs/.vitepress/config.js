@@ -1,5 +1,5 @@
 import { defineConfig } from 'vitepress'
-import { getSidebar } from './utils/autoSidebar.js'
+import { getSidebar } from '@geongu.park/vitepress-plugin-autosidebar'
 const path = require('path');
 
 // https://vitepress.dev/reference/site-config
