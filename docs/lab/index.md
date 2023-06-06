@@ -1,1 +1,3 @@
-# LAB
+---
+layout: page
+---
