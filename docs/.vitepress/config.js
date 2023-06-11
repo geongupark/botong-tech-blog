@@ -1,8 +1,7 @@
 import { defineConfig } from 'vitepress'
 import { getSidebar } from '@geongu.park/vitepress-plugin-autosidebar'
-import {getTagsFromMarkdownFiles} from './utils/getTagsFromMarkdownFiles'
 const path = require('path');
-const tags = getTagsFromMarkdownFiles(path.join(__dirname, '/../'), '/til/');
+
 // https://vitepress.dev/reference/site-config
 export default defineConfig(
   async () => {
@@ -15,8 +14,7 @@ export default defineConfig(
         nav: [
           { text: 'Home', link: '/' },
           { text: 'TIL', link: '/til/' },
-          { text: 'LAB', link: '/lab/' },
-          { text: 'TAG', link: '/tag/' }
+          { text: 'LAB', link: '/lab/' }
         ],
         sidebar: {
           '/til/': [
@@ -34,8 +32,7 @@ export default defineConfig(
     
         socialLinks: [
           { icon: 'github', link: 'https://github.com/vuejs/vitepress' }
-        ],
-        tags: tags
+        ]
       }
     };
   }
