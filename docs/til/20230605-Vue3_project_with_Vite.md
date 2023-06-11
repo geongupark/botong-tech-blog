@@ -1,11 +1,12 @@
 ---
-title: Vue3 프로젝트 만들기 with Vite
+title: Vite 모듈 번들러로 Vue3 프로젝트 만들기
 description: Vue3 프로젝트를 Vite 모듈 번들러로 세팅 해보자
 lastUpdated: true
-tags: ["vite", "vue3"]
 ---
 
-<IntroTIL></IntroTIL>
+# {{ $frontmatter.title }}
+
+# Runtime API Examples
 
 ## abcd
 
