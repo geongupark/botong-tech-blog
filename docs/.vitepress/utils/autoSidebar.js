@@ -15,7 +15,6 @@ function getSidebar(rootPath, directoryPath, excludeFileName = ['index']) {
           text: path.basename(file, extension),
           link: path.join(directoryPath, path.basename(file, extension)).replaceAll('\\', '/')
         }));
-        console.log(result);
         resolve(result);
       }
     });

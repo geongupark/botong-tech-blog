@@ -6,20 +6,22 @@ hero:
   name: "Botong"
   text: "Tech blog : botong"
   tagline: This is a blog for logging common technologies.
-  actions:
-    - theme: brand
-      text: Markdown Examples
-      link: /markdown-examples
-    - theme: alt
-      text: API Examples
-      link: /api-examples
+  # actions:
+  #   - theme: brand
+  #     text: Markdown Examples
+  #     link: /markdown-examples
+  #   - theme: alt
+  #     text: API Examples
+  #     link: /api-examples
 
 features:
-  - title: Feature A
-    details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
-  - title: Feature B
-    details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
-  - title: Feature C
-    details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
+  - title: TIL
+    details: Today I Learned
+    link: /til/
+  - title: LAB
+    details: What I make
+    link: /lab/
+  - title: TAG
+    details: Search posts by the tag
+    link: /tag/
 ---
-
