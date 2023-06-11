@@ -3,6 +3,10 @@ import { h } from 'vue'
 import Theme from 'vitepress/theme'
 import './style.css'
 import './tailwind.postcss'
+import "vue-select/dist/vue-select.css";
+import VueSelect from "vue-select";
+import IntroTIL from '../components/IntroTIL.vue'
+import VueKinesis from "vue-kinesis";
 
 export default {
   ...Theme,
@@ -12,6 +16,7 @@ export default {
     })
   },
   enhanceApp({ app, router, siteData }) {
+    app.use(VueKinesis).component("v-select", VueSelect).component('IntroTIL', IntroTIL)
     // ...
   }
 }
