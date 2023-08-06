@@ -4,7 +4,6 @@ import Theme from 'vitepress/theme'
 import './style.css'
 import './tailwind.postcss'
 import "vue-select/dist/vue-select.css";
-import VueSelect from "vue-select";
 import IntroTIL from '../components/IntroTIL.vue'
 import VueKinesis from "vue-kinesis";
 
@@ -16,7 +15,7 @@ export default {
     })
   },
   enhanceApp({ app, router, siteData }) {
-    app.use(VueKinesis).component('IntroTIL', IntroTIL).component('VueSelect', VueSelect)
+    app.use(VueKinesis).component('IntroTIL', IntroTIL)
     // ...
   }
 }

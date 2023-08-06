@@ -14,7 +14,7 @@
   "dependencies": {
     "gray-matter": "^4.0.3",
     "vue-kinesis": "^2.0.5",
-    "vue-select": "^4.0.0-beta.6",
+    "vue3-simple-typeahead": "^1.0.11",
     "vue3-typer": "^1.0.0"
   }
 }

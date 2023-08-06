@@ -2,7 +2,6 @@ import { defineConfig } from 'vitepress'
 import { getSidebar } from '@geongu.park/vitepress-plugin-autosidebar'
 import {getTagsFromMarkdownFiles} from './utils/getTagsFromMarkdownFiles'
 import path from 'path';
-// const path = require('path');
 
 const tags = getTagsFromMarkdownFiles(path.join(__dirname, '/../'), '/til/');
 // https://vitepress.dev/reference/site-config

@@ -1,8 +1,5 @@
-// const fs = require('fs');
 import fs from 'fs';
-// const path = require('path');
 import path from 'path';
-// const matter = require('gray-matter');
 import matter from 'gray-matter';
 
 // Directory containing your Markdown files
@@ -35,9 +32,9 @@ function getTagsFromMarkdownFiles(rootPath, directoryPath) {
       if (data.tags && Array.isArray(data.tags)) {
         data.tags.forEach((tag) => {
           if (tags[tag]) {
-            tags[tag].push({ title: data.title, description: data.description, link: path.join(directoryPath, path.basename(file, extension)).replace(/\\/gi, "/") });
+            tags[tag].push({ title: data.title, description: data.description, tags: data.tags, link: path.join(directoryPath, path.basename(file, extension)).replace(/\\/gi, "/") });
           } else {
-            tags[tag] = [{ title: data.title, description: data.description, link: path.join(directoryPath, path.basename(file, extension)).replace(/\\/gi, "/") }];
+            tags[tag] = [{ title: data.title, description: data.description, tags: data.tags, link: path.join(directoryPath, path.basename(file, extension)).replace(/\\/gi, "/") }];
           }
         });
       }
