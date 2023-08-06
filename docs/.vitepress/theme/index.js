@@ -3,7 +3,6 @@ import { h } from 'vue'
 import Theme from 'vitepress/theme'
 import './style.css'
 import './tailwind.postcss'
-import "vue-select/dist/vue-select.css";
 import IntroTIL from '../components/IntroTIL.vue'
 import VueKinesis from "vue-kinesis";
 
