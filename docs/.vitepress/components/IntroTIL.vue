@@ -7,7 +7,7 @@
     >
       <span
         class="font-bold cursor-pointer"
-        @click="router.go(`/tag/?keyword=${tag}`)"
+        @click="router.go(withBase(`/tag/?keyword=${tag}`))"
       >
         #{{ tag }}
       </span>

@@ -13,13 +13,13 @@
     <div class="mt-10">
       <div
         class="py-5 w-full cursor-pointer border-b-2 border-gray-200/[0.5] duration-500 hover:scale-105"
-        @click="router.go(page.link)"
+        @click="router.go(withBase(page.link))"
         v-for="page in tags[selected]"
       >
         <span
           v-for="(tag, i) in page.tags"
           :key="i"
-          class="hover:scale-105 duration-100 mr-2 inline-flex items-center rounded-md bg-indigo-50 px-2 py-1 text-[10px] text-indigo-700 ring-1 ring-inset ring-indigo-700/10"
+          class="hover:scale-105 duration-100 mr-2 inline-flex items-center rounded-md bg-indigo-50 px-2 py-1 text-[12px] text-indigo-700 ring-1 ring-inset ring-indigo-700/10"
         >
           <span
             class="font-bold cursor-pointer"
@@ -28,8 +28,8 @@
             #{{ tag }}
           </span>
         </span>
-        <div class="font-bold mt-2 truncate">{{ page.title }}</div>
-        <div class="text-sm mt-2 truncate opacity-70">
+        <div class="font-bold text-xl mt-2 truncate">{{ page.title }}</div>
+        <div class="text-base mt-2 truncate opacity-70">
           {{ page.description }}
         </div>
       </div>
@@ -39,7 +39,7 @@
 
 <script setup>
 import { onMounted, ref } from "vue";
-import { useRouter } from "vitepress";
+import { useRouter, withBase } from "vitepress";
 import SimpleTypeahead from "vue3-simple-typeahead";
 const selected = ref();
 const router = useRouter();
@@ -68,7 +68,8 @@ function selectItem(item) {
 }
 .simple-typeahead > input {
   width: 100%;
-  padding: 4px 10px 4px 10px;
+  padding: 5px 10px 5px 10px;
+  font-size: 20px;
   border-radius: var(--tag-search-input-border-radius);
   background-color: var(--tag-search-input-background);
   border: 1px solid var(--tag-search-input-border-color);
@@ -81,7 +82,7 @@ function selectItem(item) {
   border-bottom-right-radius: var(--tag-search-input-border-radius);
   border: none;
   max-height: 300px;
-  font-size: 12px;
+  font-size: 20px;
   overflow-y: auto;
   z-index: 9;
 }
