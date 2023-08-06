@@ -1,11 +1,11 @@
-# Configuring TailwindCSS to work with Vitepress
+---
+title: This is the test.
+description: This is the description for test
+lastUpdated: true
+tags: ["vite", "vue2"]
+---
 
-<h1 className="text-3xl font-bold underline">
-  Hello world!
-</h1>
-<p class="italic text-gray-500">
-  I've found myself feeling limited by the styles provided by the framework so I looked into what it takes to use a stylesheet.
-</p>
+<IntroTIL></IntroTIL>
 
 A bit of searching around ended up pointing me towards [this Github issue](https://github.com/vuejs/vitepress/issues/62) which helps a user integrate [Tailwindcss](https://tailwindcss.com/), a framework I've been using professionally and in personal projects for awhile now.
 
