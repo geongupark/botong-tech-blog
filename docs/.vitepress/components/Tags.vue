@@ -1,43 +1,33 @@
 <template>
-  <div>
-    <v-select
-      class="mx-[20%] mt-14"
-      :value="keyword"
-      :options="Object.keys(tags)"
-      placeholder="Search your tag..."
-      v-model="selected"
-      label="title"
-    ></v-select>
-  </div>
-
-  <ul>
-    <div class="mt-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4">
-      <li v-for="page in tags[selected]">
-        <kinesis-container>
-          <kinesis-element :strength="20" type="depth">
-            <a
-              :href="page.link"
-              class="card m-2 block rounded-lg p-6 duration-1000 bg-white ring-1 ring-slate-900/5 space-y-3 dark:bg-indigo-500 hover:scale-105 hover:shadow-xl hover:shadow-indigo-500/40"
-            >
-              <div class="flex items-center space-x-3">
-                <h3 class="text-slate-900 truncate text-sm font-semibold">
-                  {{ page.title }}
-                </h3>
-              </div>
-              <p class="text-slate-500 truncate text-xs">
-                {{ page.description }}
-              </p>
-            </a>
-          </kinesis-element>
-        </kinesis-container>
-      </li>
+  <div class="max-w-[800px] mx-auto">
+    <div>
+      <VueSelect
+        class="mt-14"
+        :value="keyword"
+        :options="Object.keys(tags)"
+        placeholder="Search your tag..."
+        v-model="selected"
+        label="title"
+      ></VueSelect>
     </div>
-  </ul>
+    <div class="mt-10">
+      <div
+        class="py-2 w-full cursor-pointer border-b-2 border-gray-200/[0.5] duration-500 hover:scale-105"
+        @click="router.go(page.link)"
+        v-for="page in tags[selected]"
+      >
+        <div class="font-bold">{{ page.title }}</div>
+        <div class="text-sm">{{ page.description }}</div>
+      </div>
+    </div>
+  </div>
 </template>
+
 <script setup>
 import { onMounted, ref } from "vue";
-
+import { useRouter } from "vitepress";
 const selected = ref();
+const router = useRouter();
 
 const props = defineProps({
   tags: Array,

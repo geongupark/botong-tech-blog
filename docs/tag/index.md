@@ -7,10 +7,22 @@ layout: page
   import { ref, onMounted, computed } from "vue";
   import { useData, useRoute, useRouter } from "vitepress";
 
-  const books = ["test", "vue"];
-  let tags = ref([]);
-  tags = useData().site.value.themeConfig.tags;
-  const keyword = getQueryParameter(document.location.href, "keyword")
+  const data = useData();
+  const tags = ref([]);
+  const keyword = computed(() => {
+    try{
+      return getQueryParameter(document.location.href, "keyword");
+    }
+    catch(error)
+    {
+      return '';
+    }
+  });
+  
+  onMounted(()=>{
+    tags.value = data.site.value.themeConfig.tags;
+  });
+
   function getQueryParameter(url, parameter) {
     parameter = parameter.replace(/[\[\]]/g, "\\$&");
     var regex = new RegExp("[?&]" + parameter + "(=([^&#]*)|&|#|$)");

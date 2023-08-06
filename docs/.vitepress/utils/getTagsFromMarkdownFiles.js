@@ -1,6 +1,9 @@
-const fs = require('fs');
-const path = require('path');
-const matter = require('gray-matter');
+// const fs = require('fs');
+import fs from 'fs';
+// const path = require('path');
+import path from 'path';
+// const matter = require('gray-matter');
+import matter from 'gray-matter';
 
 // Directory containing your Markdown files
 const markdownDir = 'path/to/markdown/files';

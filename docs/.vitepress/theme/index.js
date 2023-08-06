@@ -16,7 +16,7 @@ export default {
     })
   },
   enhanceApp({ app, router, siteData }) {
-    app.use(VueKinesis).component("v-select", VueSelect).component('IntroTIL', IntroTIL)
+    app.use(VueKinesis).component('IntroTIL', IntroTIL).component('VueSelect', VueSelect)
     // ...
   }
 }
